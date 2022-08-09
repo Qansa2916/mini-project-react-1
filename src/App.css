@@ -85,6 +85,43 @@ display: flex;
     font-weight: 600;
 }
 
+.todo-count{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 32px;
+    height: 24px;
+    border-radius: 4px;
+
+    color: var(--label-font-color);
+    background-color: var(--secondary-background-color);
+    box-shadow: var(--main-box-shadow-inset);
+}
+
 .todo-icon-wrapper{
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    align-items: center;
+    width: 120px;
+}
+
+.todo-action-button{
+    border: none;
+    background-color: unset;
+    padding: unset;
+
+    height: 24px;
+    width: 24px;
+}
+
+.pm-icon{
+    height: 24px;
+    width: 24px;
+}
+
+.todo-divider{
+    border-bottom: 1px solid var(--main-border-color);
 }

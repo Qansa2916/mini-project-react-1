@@ -3,6 +3,7 @@ import './App.css';
 import shoppingIcon from './assets/cart_icon.png';
 import plusIcon from './assets/plus_icon.png';
 import minusIcon from './assets/minus_icon.png';
+import classnames from 'classnames';
 
 
 function App() {
@@ -34,17 +35,18 @@ function App() {
     </form>
     {todos.length > 0 ? (
       <div className='todos'>
-        {todos.map ((todo,index)=> {
+        {todos.map ((todo,index, arr)=> {
           return (
-            <div key={index} className='todo'>
+            <div key={index} className={`todo ${!(arr.lenght === index+1) && `todo-divider`}`}>
+
               {todo.title}
               <div className='todo-icon-wrapper'>
                 <div className='todo-count'>{todo.count}</div>
                 <button className='todo-action-button' >
-                  <img src={minusIcon} alt='minus icon'/>
+                  <img className='pm-icon' src={minusIcon} alt='minus icon'/>
                 </button>
                 <button className='todo-action-button' >
-                  <img src={plusIcon} alt='plus icon'/>
+                  <img className='pm-icon' src={plusIcon} alt='plus icon'/>
                 </button>
 
                
